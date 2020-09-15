@@ -7,6 +7,8 @@ import "fmt"
 输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3
 输出: [3,3,5,5,6,7]
 https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
+思路：使用queue，queue的队首保存当前合法的最大值，当新的值大于队首的值时，可以清空队列，该值入队
+	新的值小于队首时，在递增队列中找到自己合适的位置
 */
 
 func main() {
