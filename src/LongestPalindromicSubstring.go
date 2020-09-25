@@ -11,7 +11,7 @@ https://leetcode-cn.com/problems/longest-palindromic-substring/
 思路：s[i+1 ... j-1]是回文且s[i]==s[j]   或者 j - i < 3且s[j] == s[i]
 */
 func main() {
-	fmt.Print(longestPalindrome("aaaa"))
+	fmt.Print(longestPalindrome("ac"))
 }
 
 func longestPalindrome(s string) string {
@@ -22,13 +22,13 @@ func longestPalindrome(s string) string {
 	for i := 0; i < len(s); i++ {
 		dp[i] = make([]bool, len(s))
 	}
-	res := ""
-	for i := 0; i < len(s); i++ {
-		for j := 0; j <= i; j++ {
-			if s[i] == s[j] && (i-j <= 2 || dp[i-1][j+1] == true) {
-				dp[i][j] = true
-				if i-j+1 > len(res) {
-					res = s[j : i+1]
+	res := s[0:1]
+	for r := 0; r < len(s); r++ {
+		for l := 0; l < r; l++ {
+			if s[r] == s[l] && (r-l <= 2 || dp[l+1][r-1] == true) {
+				dp[l][r] = true
+				if r-l+1 > len(res) {
+					res = s[l : r+1]
 				}
 			}
 		}
