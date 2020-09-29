@@ -23,11 +23,6 @@ Return:
    [5,8,4,5]
 ]
 */
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
 
 func main() {
 	leftNode := TreeNode{Val: 2}
