@@ -11,7 +11,8 @@ You may complete as many transactions as you like (i.e., buy one and sell one sh
 Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
 不能同时进行交易
 
-思路：找升序段？
+可以进行任意次交易
+
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii
 */

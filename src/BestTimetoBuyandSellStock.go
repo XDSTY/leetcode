@@ -78,13 +78,6 @@ func maxProfitSignWithDp(prices []int) int {
 	return dp[len(dp)-1][0]
 }
 
-func max(val1, val2 int) int {
-	if val1 < val2 {
-		return val2
-	}
-	return val1
-}
-
 /**
 还可以对上面的代码进行优化，i 只 用到了 i-1的值，可以去掉dp数组，使用两个变量代替
 */
